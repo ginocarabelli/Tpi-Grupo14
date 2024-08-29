@@ -1,4 +1,0 @@
-Legajo: 412045
-Nombre: Gino
-Apellido: Carabelli García
-Mail: 412045@tecnicatura.frc.utn.edu.ar

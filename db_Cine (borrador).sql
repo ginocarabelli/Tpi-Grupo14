@@ -42,7 +42,6 @@ id_sucursal int primary key,
 id_barrio int not null,
 direccion varchar(50) not null,
 altura int not null,
-cantidad_salas int not null,
 razon_social varchar(25) not null,
 CONSTRAINT fk_id_barrio_sucursal FOREIGN KEY (id_barrio) REFERENCES Barrios(id_barrio)
 )

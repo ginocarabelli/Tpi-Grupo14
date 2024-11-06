@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    box-sizing: border-box;
+}
+main{
+    min-height: 100vh;
+    background-color: red;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 600% 400%;
+    animation: gradient 15s ease infinite;
+}
+.container-fluid{
+    gap: 10px;
+}
+.container-fluid .navbar-nav{
+    width: 95%;
+    justify-content: flex-end;
+    gap: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container-fluid .navbar-nav a{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    align-items: center;
+}
+.container-fluid .navbar-nav a:hover{
+    color: white;
+    transition: .3s;
+}
+.navbar-brand{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.container-main{
+    margin-top: 15%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.container-main h1{  
+    font-size: 50px;
+}
+.container-main p{  
+    font-size: 30px;
+}
+.container-main .btn{  
+    font-size: 30px;
+    padding: 10px 20px;
+}
+
+.container-consultas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 30px;
+    font-family: 'Roboto Mono', monospace;
+}
+.container-consultas h1{
+    font-size: 60px;
+}
+.container-consultas p{
+    font-size: 30px;
+    width: 75%;
+    text-align: center;
+}
+
+footer{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    margin: auto;
+}
+

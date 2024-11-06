@@ -1,0 +1,6 @@
+@CineAPI_HostAddress = http://localhost:5162
+
+GET {{CineAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

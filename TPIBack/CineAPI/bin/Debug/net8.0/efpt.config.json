@@ -1,0 +1,142 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "CineContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "CineAPI",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Asientos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Barrios]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Categorias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Clientes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Descuentos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DiasSemanas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Directores]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Empleados]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EstadosReservas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Facturas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FormasPagos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Funciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Generos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Idiomas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Localidades]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Paises]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Peliculas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Provincias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Reservas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Salas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SalasFunciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Sucursales]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tickets]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TiposDocumentos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TiposSalas]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

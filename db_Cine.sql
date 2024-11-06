@@ -237,6 +237,14 @@ INSERT INTO Clientes (id_cliente, nombre, apellido, id_tipo_documento, documento
 VALUES (9, 'Elena', 'Gómez', 4, 66554433, 'F', 'elena.gomez@gmail.com', 914567890);
 INSERT INTO Clientes (id_cliente, nombre, apellido, id_tipo_documento, documento, sexo, email, telefono) 
 VALUES (10, 'Sergio', 'Díaz', 1, 55443322, 'M', 'sergio.diaz@gmail.com', 955123456);
+INSERT INTO Clientes (id_cliente, nombre, apellido, id_tipo_documento, documento, sexo, email, telefono)
+VALUES (11, 'Carlos', 'Ramírez', 1, 33445566, 'M', 'carlos.ramirez@gmail.com', 3412345678);
+INSERT INTO Clientes (id_cliente, nombre, apellido, id_tipo_documento, documento, sexo, email, telefono)
+VALUES (12, 'Lucía', 'Martínez', 3, 11223399, 'F', 'lucia.martinez@gmail.com', 2912345679);
+INSERT INTO Clientes (id_cliente, nombre, apellido, id_tipo_documento, documento, sexo, email, telefono)
+VALUES (13, 'Marco', 'Suárez', 2, 98765432, 'M', 'marco.suarez@gmail.com', 9512345678);
+INSERT INTO Clientes (id_cliente, nombre, apellido, id_tipo_documento, documento, sexo, email, telefono)
+VALUES (14, 'Beatriz', 'Vega', 4, 22112233, 'F', 'beatriz.vega@gmail.com', 2212345670);
 
 INSERT INTO Sucursales (id_sucursal, nombre, id_barrio, direccion, altura)
 VALUES 
@@ -293,6 +301,11 @@ VALUES
 (6, 'Piratas del Caribe: El cofre de la muerte', 8, '02:31:00', 'El Capitán Jack Sparrow busca evitar su condena eterna en el Holandés Errante al encontrar el Cofre de Davy Jones.', 7.3, 1, 1,'07-07-2006', 1),
 (7, 'Your Name', 9, '01:52:00', 'Una chica de campo y un chico de ciudad descubren que pueden intercambiar cuerpos a través de los sueños, lo que cambia sus vidas.', 8.4, 2, 2,'26-08-2016', 5);
 
+INSERT INTO Peliculas (id_pelicula, titulo, id_director, duracion, descripcion, puntuacion, id_categoria, id_genero, fecha_estreno, id_idioma)
+VALUES (8, 'La La Land', 2, '02:08:00', 'Un musical moderno sobre la vida de dos artistas en Los Ángeles.', 8.0, 3, 2, '09-12-2016', 1);
+
+INSERT INTO Peliculas (id_pelicula, titulo, id_director, duracion, descripcion, puntuacion, id_categoria, id_genero, fecha_estreno, id_idioma)
+VALUES (9, 'Coco', 5, '01:45:00', 'Un niño mexicano se embarca en una aventura en el Mundo de los Muertos.', 8.4, 5, 4, '27-10-2017', 1);
 
 INSERT INTO Funciones (id_funcion, id_sucursal, id_pelicula, fecha, horario)
 VALUES 
@@ -301,7 +314,11 @@ VALUES
 (3, 3, 3,'17-10-2024','18:00:00'),
 (4, 4, 4,'18-10-2024','20:00:00'),
 (5, 5, 5,'19-10-2024','21:30:00');
+INSERT INTO Funciones (id_funcion, id_sucursal, id_pelicula, fecha, horario)
+VALUES (6, 1, 8, '22-10-2024', '19:00:00');
 
+INSERT INTO Funciones (id_funcion, id_sucursal, id_pelicula, fecha, horario)
+VALUES (7, 2, 9, '23-10-2024', '18:30:00');
 
 INSERT INTO Empleados (id_empleado, nombre, apellido, id_tipo_documento, documento, id_sucursal)
 VALUES 
@@ -311,6 +328,11 @@ VALUES
 (4, 'Leo', 'Demetrio', 1, 34567890, 4),
 (5, 'Mateo', 'Delgado', 2, 45678901, 5),
 (6, 'Leo', 'Acosta', 2, 45678901, 1);
+INSERT INTO Empleados (id_empleado, nombre, apellido, id_tipo_documento, documento, id_sucursal)
+VALUES (7, 'Martín', 'Sánchez', 1, 11223344, 1);
+
+INSERT INTO Empleados (id_empleado, nombre, apellido, id_tipo_documento, documento, id_sucursal)
+VALUES (8, 'Valeria', 'Torres', 2, 99887766, 1);
 
 INSERT INTO TiposSalas (tipo_sala) 
 VALUES 
@@ -395,6 +417,8 @@ VALUES (1, 1, 'A', 1),
 (28, 1, 'B', 5),
 (29, 2, 'B', 5),
 (30, 3, 'B', 5)
+INSERT INTO Asientos (id_asiento, enumeracion, fila, id_sala_funcion)
+VALUES (31, 1, 'C', 5), (32, 2, 'C', 5), (33, 3, 'C', 5)
 
 insert into Reservas(id_reserva,id_estado_reserva, hora_reserva, id_sala_funcion, id_asiento)
 values
@@ -403,6 +427,11 @@ values
 (3,2,'20:30:00',3,3),
 (4,3,'21:30:00',4,4),
 (5,3,'19:45:00',5,5)
+INSERT INTO Reservas (id_reserva, id_estado_reserva, hora_reserva, id_sala_funcion, id_asiento)
+VALUES (6, 2, '20:00:00', 5, 31);
+
+INSERT INTO Reservas (id_reserva, id_estado_reserva, hora_reserva, id_sala_funcion, id_asiento)
+VALUES (7, 3, '21:15:00', 5, 32);
 
 insert into Facturas(id_factura, id_reserva, id_cliente, id_empleado, razon_social, id_forma_pago)
 values
@@ -411,6 +440,11 @@ values
 (3,3,2,3,'Cine Entertainment',2),
 (4,4,5,5,'Cine Entertainment',4),
 (5,5,4,1,'Cine Entertainment',3)
+INSERT INTO Facturas (id_factura, id_reserva, id_cliente, id_empleado, razon_social, id_forma_pago)
+VALUES (6, 6, 11, 7, 'Cine Entretenimiento', 3);
+
+INSERT INTO Facturas (id_factura, id_reserva, id_cliente, id_empleado, razon_social, id_forma_pago)
+VALUES (7, 7, 12, 8, 'Cine Entretenimiento', 2);
 
 insert into Tickets(id_ticket, id_factura, id_sala_funcion, id_asiento,id_descuento, pre_unitario)
 values
@@ -419,23 +453,35 @@ values
 (3,3,4,2,2,5000.00),
 (4,4,5,5,3,5000.00),
 (5,5,2,4,1,5000.00)
+INSERT INTO Tickets (id_ticket, id_factura, id_sala_funcion, id_asiento, id_descuento, pre_unitario)
+VALUES (6, 6, 5, 31, 2, 5200.00);
 
---1 Películas con puntuación superior a 8, agrupadas por género y ordenadas por puntuación promedio:
+INSERT INTO Tickets (id_ticket, id_factura, id_sala_funcion, id_asiento, id_descuento, pre_unitario)
+VALUES (7, 7, 5, 32, 1, 5400.00);
+
+--1 Películas con puntuación superior a x, agrupadas por género y ordenadas por puntuación promedio:
+CREATE PROC SP_CONSULTA1
+@puntuacion decimal(5,2)
+AS
 SELECT g.genero, p.puntuacion AS puntuacion_promedio
 FROM Peliculas p
 JOIN Generos g ON p.id_genero = g.id_genero
-WHERE p.puntuacion > 8
+WHERE p.puntuacion > @puntuacion
 ORDER BY puntuacion_promedio DESC
-
+GO
 --2 Mostrar el nombre y apellido de los clientes que cuenten con menos de 5 reservas 
+CREATE PROC SP_CONSULTA2
+AS
 SELECT c.nombre, c.apellido, COUNT(r.id_reserva) reservas
 FROM Clientes c
 JOIN Facturas f ON c.id_cliente = f.id_cliente
 JOIN Reservas r ON f.id_reserva = r.id_reserva
 GROUP BY c.id_cliente, c.nombre, c.apellido
 HAVING COUNT(r.id_reserva) < 5
-
+GO
 --3 Calcular el ingreso total por sucursal, considerando el precio unitario de los tickets y aplicando cualquier descuento.
+CREATE PROC SP_CONSULTA3
+AS
 SELECT Sucursales.nombre AS Sucursal, 
        SUM(Tickets.pre_unitario * (1 - ISNULL(Descuentos.porcentaje_descuento, 0) / 100)) AS IngresoTotal
 FROM Tickets
@@ -447,9 +493,10 @@ JOIN Sucursales ON Salas.id_sucursal = Sucursales.id_sucursal
 LEFT JOIN Descuentos ON Tickets.id_descuento = Descuentos.id_descuento
 GROUP BY Sucursales.nombre
 ORDER BY IngresoTotal DESC
-
+GO
 --4 Crear una vista que muestre los detalles de las funciones (película, sucursal, horario) y la disponibilidad de asientos.
-CREATE VIEW VistaFunciones AS
+CREATE VIEW SP_CONSULTA4
+AS
 SELECT Peliculas.titulo AS Pelicula, 
        Sucursales.nombre AS Sucursal, 
        Funciones.fecha, 
@@ -460,8 +507,10 @@ JOIN Peliculas ON Funciones.id_pelicula = Peliculas.id_pelicula
 JOIN SalasFunciones ON Funciones.id_funcion = SalasFunciones.id_funcion
 JOIN Salas ON SalasFunciones.id_sala = Salas.id_sala
 JOIN Sucursales ON Salas.id_sucursal = Sucursales.id_sucursal
-
+GO
 --5 Listar las películas cuya puntuación es mayor al promedio de las puntuaciones de todas las películas del mismo género.
+CREATE PROC SP_CONSULTA5
+AS
 SELECT Peliculas.titulo, 
        Peliculas.puntuacion, 
        Generos.genero
@@ -470,8 +519,10 @@ JOIN Generos ON Peliculas.id_genero = Generos.id_genero
 WHERE Peliculas.puntuacion > (SELECT AVG(puntuacion)
 							  FROM Peliculas
 							  WHERE Peliculas.id_genero = Generos.id_genero)
-
+GO
 --6 Se necesita mostrar nombre, apellido y asiento de los clientes que hayan hecho una reserva para un día de descuento
+CREATE PROC SP_CONSULTA6
+AS
 SELECT c.id_cliente, c.nombre + ' ' + c.apellido Cliente, STR(a.enumeracion) + fila Asiento, STR(d.porcentaje_descuento) + '%' Descuento, COUNT(r.id_reserva) Reservas
 FROM Facturas f
 JOIN Clientes c ON c.id_cliente = f.id_factura
@@ -484,9 +535,11 @@ JOIN SalasFunciones sf ON sf.id_sala_funcion = r.id_sala_funcion
 JOIN Funciones fu ON fu.id_funcion = sf.id_funcion
 WHERE DATEPART(WEEKDAY, fu.fecha) IN (1,2,3)
 GROUP BY c.id_cliente, c.nombre, c.apellido, a.enumeracion, a.fila, d.porcentaje_descuento
-
+GO
 --7 Calcular el total de ingresos generados por cada película en función de la suma de los precios de los tickets vendidos 
 -- incluidas aquellas que recaudaron $0
+CREATE PROC SP_CONSULTA7
+AS
 SELECT Peliculas.titulo, 
        COALESCE(SUM(Tickets.pre_unitario), 0) AS TotalIngresos
 FROM Peliculas
@@ -495,8 +548,10 @@ LEFT JOIN SalasFunciones ON Funciones.id_funcion = SalasFunciones.id_funcion
 LEFT JOIN Tickets ON SalasFunciones.id_sala_funcion = Tickets.id_sala_funcion
 GROUP BY Peliculas.titulo
 ORDER BY TotalIngresos DESC
-
+GO
 --8 Mostrar los directores cuyas peliculas tengan una puntuación mayor a 9
+CREATE PROC SP_CONSULTA8
+AS
 SELECT 
 d.id_director,
 d.nombre + ' ' + d.apellido AS director_nombre,
